@@ -1,4 +1,4 @@
-package com.github.ricardocomar.testpyramid.hystrix.server;
+package com.github.diegojose.cloud.hystrix.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

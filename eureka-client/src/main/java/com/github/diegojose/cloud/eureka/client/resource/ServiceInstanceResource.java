@@ -1,4 +1,4 @@
-package com.github.ricardocomar.testpyramid.eureka.client.resource;
+package com.github.diegojose.cloud.eureka.client.resource;
 
 import com.netflix.discovery.EurekaClient;
 import org.springframework.beans.factory.annotation.Autowired;

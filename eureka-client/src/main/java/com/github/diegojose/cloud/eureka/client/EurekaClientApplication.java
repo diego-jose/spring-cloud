@@ -1,4 +1,4 @@
-package com.github.ricardocomar.testpyramid.eureka.client;
+package com.github.diegojose.cloud.eureka.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

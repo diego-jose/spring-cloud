@@ -1,0 +1,20 @@
+server:
+  port: 9092
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defautlZone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: eurekaClientService
+
+eurekaClientService:
+  ribbon:
+      eureka:
+        enabled: true
+      ServerListRefreshInterval: 15000
+      NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
