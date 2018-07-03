@@ -27,7 +27,6 @@ public class HystrixService {
         LOGGER.log(Level.INFO, "Request fail url");
         return this.restTemplate.getForObject(uri, String.class);
     }
-
     public String reliable() {
 
         LOGGER.log(Level.INFO, "Execution Fallback method");

@@ -28,7 +28,7 @@ public class BookCreateDataProviderTest {
 
 	final Book book = Book.builder().name("John's thoughts").writter("John Snow").price(120.0).build();
 
-	final Book expected = Book.builder().id(1L).name("John's thoughts").writter("John Snow").price(120.0).build();
+	final Book expected = Book.builder().id(2L).name("John's thoughts").writter("John Snow").price(120.0).build();
 
 	@Test
 	public void testSuccess() throws Exception {

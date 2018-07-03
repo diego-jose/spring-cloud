@@ -2,6 +2,7 @@ package com.github.diegojose.cloud.hystrix.client.resource;
 
 import com.github.diegojose.cloud.hystrix.client.model.CopyOfBook;
 import com.github.diegojose.cloud.hystrix.client.service.HystrixService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
@@ -51,6 +52,17 @@ public class HystrixResource {
     public CopyOfBook findBook(@PathVariable("id") long id)  {
         LOGGER.log(Level.INFO, "Call Feing Client...");
         return bookClient.findBooks(id);
+    }
+
+    @GetMapping("to-find-music")
+    @HystrixCommand(fallbackMethod = "circuit")
+    public String findMusic(){
+        LOGGER.log(Level.INFO, "Call Hystrix open circuit...");
+        return musicaClient.findMusica("Iron");
+    }
+
+    public String circuit(){
+        return "No service active";
     }
 
 
